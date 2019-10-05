@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <annotation>
+    <SimBiology xmlns="http://www.mathworks.com">
+      <Version Major="5" Minor="9" Point="0"/>
+    </SimBiology>
+  </annotation>
+  <model id="mw85ca03d2_6fa1_4864_8562_a161967da7ad" name="FluorenePathway">
+    <listOfCompartments>
+      <compartment id="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" name="Fluorene" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="mw35d9a7ee_00c0_40ef_b87d_5bd3869bf212" name="Fluorene" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mwcbba66d9_02ed_452b_b803_ac85cb2c67a3" name="9-fluorenol" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw6f639629_22fe_4e2c_a803_717838ad5ef8" name="NAD+" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw894bf0df_4335_4c15_a457_470ab61357c4" name="NADH" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw6f1a0dbc_365b_4260_9b68_a8950edd6bc9" name="ATP(1)" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="3" boundaryCondition="false" constant="false"/>
+      <species id="mwe11ea1c9_708a_4f7c_b7a5_bb13c1e8c99c" name="9-Fluorenone" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mwa474f1f7_0061_47cc_8336_953afa67804d" name="NAD+(1)" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw4df15f5b_cb16_47ba_a67e_7890b7138aa3" name="NADH(1)" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw04399be7_c983_4a1d_8d89_a1b3c1557129" name="ATP(2)" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="3" boundaryCondition="false" constant="false"/>
+      <species id="mw92449552_1c87_4021_af88_52bae9977503" name="1,9a-dihydroxy-1, 9a-dihydro-9-H-fluoren-9-one" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mwf89c8fef_4821_489f_b493_ecfccf6e3841" name="2,3-Dihydroxy-X-carboxybiphenyl" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw61cb413d_89d8_4db7_b3f0_2a9d8234987f" name="2-Hydroxy-6-oxo-6-(2-carboxyphenyl)-hexa-2,4-denoate" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw5a58938d_434d_4772_a5bb_b6966eddbb0e" name="cia-2-Hydroxypenta-2,4-dienoate" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw832e4f3a_686c_45d9_8628_bb7abdb20e94" name="Phtalate" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw3d39708f_ef5f_4147_af05_6c38078cceeb" name="4-Hydroxy-2-oxovaerate" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mwaedfd3ef_c945_464b_b3ab_673a76c60a12" name="acetaldehyde" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw50599ba1_82ba_4f66_8f4e_b92f10dae5b5" name="pyruvate" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="1" boundaryCondition="false" constant="false"/>
+      <species id="mw76bc7ff6_eb5a_4d31_9dda_52d850a4d5d9" name="ATP(3)" compartment="mw76bfe963_343d_4bf2_aaa7_5ba6305a09c7" initialConcentration="15" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="mwac88b44b_f9ac_4d88_a29f_cfbaa798bede" name="Napthalene 1,2 dioxygenase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw35d9a7ee_00c0_40ef_b87d_5bd3869bf212" stoichiometry="1"/>
+          <speciesReference species="mw6f639629_22fe_4e2c_a803_717838ad5ef8" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwcbba66d9_02ed_452b_b803_ac85cb2c67a3" stoichiometry="1"/>
+          <speciesReference species="mw894bf0df_4335_4c15_a457_470ab61357c4" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw5694e86d_0407_45b6_95a1_fad8a8d2e2b1 </ci>
+              <ci> mw35d9a7ee_00c0_40ef_b87d_5bd3869bf212 </ci>
+              <ci> mw6f639629_22fe_4e2c_a803_717838ad5ef8 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw5694e86d_0407_45b6_95a1_fad8a8d2e2b1" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0261e5a0_dbab_4092_9abc_a4162acd69de" name="1" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw894bf0df_4335_4c15_a457_470ab61357c4" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw6f1a0dbc_365b_4260_9b68_a8950edd6bc9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwb4a1abf6_88a7_43b2_87c3_6ddc24b3b901 </ci>
+              <ci> mw894bf0df_4335_4c15_a457_470ab61357c4 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwb4a1abf6_88a7_43b2_87c3_6ddc24b3b901" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw2fd24880_afa9_4f06_b3c9_9000859c289d" name="9-fluorenol dehydrogenase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mwcbba66d9_02ed_452b_b803_ac85cb2c67a3" stoichiometry="1"/>
+          <speciesReference species="mwa474f1f7_0061_47cc_8336_953afa67804d" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwe11ea1c9_708a_4f7c_b7a5_bb13c1e8c99c" stoichiometry="1"/>
+          <speciesReference species="mw4df15f5b_cb16_47ba_a67e_7890b7138aa3" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw95fef01d_3953_47ca_9d1f_a27e7436388c </ci>
+              <ci> mwcbba66d9_02ed_452b_b803_ac85cb2c67a3 </ci>
+              <ci> mwa474f1f7_0061_47cc_8336_953afa67804d </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw95fef01d_3953_47ca_9d1f_a27e7436388c" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw4a6ad75c_c87b_462e_86ba_e2939f49deff" name="2" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw4df15f5b_cb16_47ba_a67e_7890b7138aa3" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw04399be7_c983_4a1d_8d89_a1b3c1557129" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwd6f91278_c1d7_4208_b4d7_ca62d2eea1ed </ci>
+              <ci> mw4df15f5b_cb16_47ba_a67e_7890b7138aa3 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwd6f91278_c1d7_4208_b4d7_ca62d2eea1ed" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwb4e8913d_6053_482a_90dc_5b8173a91765" name="9-fluorenone-3,4-deoxygenase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mwe11ea1c9_708a_4f7c_b7a5_bb13c1e8c99c" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw92449552_1c87_4021_af88_52bae9977503" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwfd7a0693_008f_4813_b104_3cf13ec37251 </ci>
+              <ci> mwe11ea1c9_708a_4f7c_b7a5_bb13c1e8c99c </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwfd7a0693_008f_4813_b104_3cf13ec37251" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwdd10969f_9dde_4063_8423_457d40518c18" name="1-hydro-1, 1a-dihydroxy-9-fluorenone dehydrogenase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw92449552_1c87_4021_af88_52bae9977503" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwf89c8fef_4821_489f_b493_ecfccf6e3841" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwfeb0d1c9_bd04_4044_9295_f31db9742a50 </ci>
+              <ci> mw92449552_1c87_4021_af88_52bae9977503 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwfeb0d1c9_bd04_4044_9295_f31db9742a50" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwe2856916_4b6c_4aba_83dc_9fc051d42735" name="2,3-dihydroxy-Z-carboxybiphenyl 1,2-dioxygenase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mwf89c8fef_4821_489f_b493_ecfccf6e3841" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw61cb413d_89d8_4db7_b3f0_2a9d8234987f" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw8e33d3ff_546e_4477_8140_2e6e6d4faa8f </ci>
+              <ci> mwf89c8fef_4821_489f_b493_ecfccf6e3841 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw8e33d3ff_546e_4477_8140_2e6e6d4faa8f" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw66634bff_dcd2_4700_9f97_16906eabcad7" name="2-hydroxy-6-oxo-6-(2-carboxyphenyl)-hexa-2,4-denoate hydrolase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw61cb413d_89d8_4db7_b3f0_2a9d8234987f" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw5a58938d_434d_4772_a5bb_b6966eddbb0e" stoichiometry="1"/>
+          <speciesReference species="mw832e4f3a_686c_45d9_8628_bb7abdb20e94" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw0b5d57fb_f612_4b7d_8a42_f90c4bdc43c8 </ci>
+              <ci> mw61cb413d_89d8_4db7_b3f0_2a9d8234987f </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw0b5d57fb_f612_4b7d_8a42_f90c4bdc43c8" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwca73cdc7_09f9_4ab9_9765_2117f42f4f3d" name="2-oxopent-4-enoate hydratase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw5a58938d_434d_4772_a5bb_b6966eddbb0e" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw3d39708f_ef5f_4147_af05_6c38078cceeb" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mw689911d6_cbe1_487e_99f1_95c33d75cff3 </ci>
+              <ci> mw5a58938d_434d_4772_a5bb_b6966eddbb0e </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mw689911d6_cbe1_487e_99f1_95c33d75cff3" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mwd1ab776b_d132_4379_9544_907eab6f66b9" name="4-hydroxy-2-oxovalerate aldolase" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw3d39708f_ef5f_4147_af05_6c38078cceeb" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mwaedfd3ef_c945_464b_b3ab_673a76c60a12" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwd5b40a58_9b76_450b_8825_a540f823ab4d </ci>
+              <ci> mw3d39708f_ef5f_4147_af05_6c38078cceeb </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwd5b40a58_9b76_450b_8825_a540f823ab4d" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw123e0c14_507a_48d1_aa25_223987e47067" name="3" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw3d39708f_ef5f_4147_af05_6c38078cceeb" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw50599ba1_82ba_4f66_8f4e_b92f10dae5b5" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwe4c86d78_4a44_41ef_bbfc_cff55d89d831 </ci>
+              <ci> mw3d39708f_ef5f_4147_af05_6c38078cceeb </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwe4c86d78_4a44_41ef_bbfc_cff55d89d831" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="mw0fe03b5a_88d6_4d82_8fb1_3c4223520911" name="4" reversible="false">
+        <listOfReactants>
+          <speciesReference species="mw50599ba1_82ba_4f66_8f4e_b92f10dae5b5" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="mw76bc7ff6_eb5a_4d31_9dda_52d850a4d5d9" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> mwabf6b049_48cf_42c3_a249_933130ff7449 </ci>
+              <ci> mw50599ba1_82ba_4f66_8f4e_b92f10dae5b5 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter id="mwabf6b049_48cf_42c3_a249_933130ff7449" name="kf" value="1" constant="true"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
