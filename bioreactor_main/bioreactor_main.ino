@@ -1,6 +1,12 @@
 // AUTHOR: CCA iGEM 
 // BUILD ON ARDUINO GENUINO UNO
 
+// UTILIZES: 
+// - stepper motor for stirring
+// - pumps and pressure sensor for maintenance of pressure
+// - temperature and heater for maintenance of temperature
+// - button to switch between modes
+
 #include "dht.h"
 #include "programmable_air.h"
 #include <Stepper.h>
