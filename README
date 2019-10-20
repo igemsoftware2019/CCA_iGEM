@@ -1,1 +1,3 @@
 Respository for CCA iGEM Github
+
+All the files ending in .sbproj are our MATLAB applications; run using SynBio. The directory titled bioreactor bioreactor-main contains all the files necessary to run the bioreactor; compile using Arduino.
